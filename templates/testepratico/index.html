@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teste</title>
+  </head>
+  <body>
+    <form method="POST" action="{% url 'testepratico:aluno' %}">
+      {% csrf_token %}
+      <div>
+        <input name="idade" type="number" placeholder="idade" />
+      </div>
+      <div>
+        <input name="matricula" type="number" placeholder="matricula" />
+      </div>
+      <div>
+        <input name="username" type="text" placeholder="nome" />
+      </div>
+      <div>
+        <input name="disciplina" type="text" placeholder="disciplina" />
+      </div>
+      <div>
+        <input name="nota1" type="number" placeholder="nota1" />
+      </div>
+      <div>
+        <input name="nota2" type="number" placeholder="nota2" />
+      </div>
+
+      <button type="submit">registrar</button>
+    </form>
+  </body>
+</html>
